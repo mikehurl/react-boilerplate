@@ -2,10 +2,40 @@
   "name": "react-boilerplate",
   "version": "1.0.0",
   "description": "How to create a 'React+' project",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack -p",
+    "start": "webpack-dev-server  --hot --progress --config ./webpack.config.js",
+    "lint": "./node_modules/.bin/eslint --color --config './.eslintrc.js' src/",
+    "test": "jest --watch --coverage"
   },
   "author": "Mike Hurl",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "styled-components": "^2.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^2.9.1",
+    "eslint": "^3.19.0",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "html-webpack-plugin": "^2.29.0",
+    "jest": "^20.0.4",
+    "react-hot-loader": "^3.0.0-beta.7",
+    "react-test-renderer": "^15.6.1",
+    "webpack": "^3.1.0",
+    "webpack-dev-server": "^2.5.1"
+  }
 }
